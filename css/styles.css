@@ -153,7 +153,13 @@ Section header
 
 .contact-link {
   color: var(--main-txt-cl);
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
 }
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-cl);}
 
 .active-link {
   color: var(--accent-cl);
@@ -162,6 +168,10 @@ Section header
 .link:hover,
 .link:focus {
   color: var(--accent-cl);
+}
+.icon-header{
+  margin-right: 10px;
+  fill: currentColor;
 }
 /* 
 ===============
@@ -180,13 +190,20 @@ HERO
 ===============
  */
 .hero {
-  background-color: var(--dark-bg-cl);
-}
-
-.hero {
+  max-width: 1600рх;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40),rgba(47, 48, 58, 0.40)),
+  url(../images/hero-img/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   
 }
+
 
 
 .hero-title {
@@ -230,7 +247,7 @@ HERO
 
  .about-list {
   display: flex;
-  align-items: center;
+  /* align-items: stretch; */
 }
 .about-title {
   color: var(--secondary-txt-cl);
@@ -246,13 +263,29 @@ HERO
   display: block;
   margin-right: 30px;
   width: 270px;
+  align-items: center;
 
 }
-
-
 .about-item:last-child {
   margin-right: 0;
+
 }
+
+.about-icon{
+  width: 270px;
+  height: 120px;
+  padding-top: 25px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 100px; 
+  background-color: #F5F4FA;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+
 /* 
 ===============
 Features
@@ -310,6 +343,9 @@ Team
 .member-title{
   margin-bottom: 10px;
 }
+.member-position{
+  margin-bottom: 16px;
+}
 
 .member-list {
   display: flex;
@@ -319,10 +355,106 @@ Team
   margin-right: 30px;
   /* border-radius: 0px 0px 4px 4px;
   background: var(--main-bg-cl); */
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
 }
 .member-item:last-child {
   margin-right: 0;
 }
+
+.socials{
+ display: flex;
+ justify-content: center;  
+ align-items: center;
+}
+
+.social-link{
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  background-color: var(--main-bg-cl);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+}
+
+.social-item:not(:last-child){
+  margin-right: 10px;
+}
+
+.social-icon{
+  fill: #AFB1B8;
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--main-bg-cl);
+}
+.social-link:hover{
+  background-color: var(--accent-cl);
+}
+
+/* 
+===============
+Clients
+===============
+ */
+ .clients-section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+ }
+ 
+ .client-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .client-title {
+  color: var(--secondary-txt-cl);
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1.08px;
+  margin-bottom: 50px;
+}
+
+.client-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 170px;
+  height: 92px;
+  
+  border-radius: 4px;
+  border: 1px solid #AFB1B8;
+}
+  
+.client-item:not(:last-child){
+    margin-right: 30px;}
+    
+.client-logo {
+      fill: #AFB1B8;
+}
+
+.client-link:hover,
+.client-link:focus{
+  border-color: var(--accent-cl);
+}
+
+.client-link:hover .client-logo,
+.client-link:focus .client-logo {
+  fill: var(--accent-cl);
+}
+
+  
+
+
+
+    
+
 
 /* 
 ===============
@@ -338,6 +470,38 @@ Footer
   display: block;
   margin-bottom: 28px;
 }
+.title-footer{
+  color: var(--title-txt-cl);
+margin-bottom: 20px;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.42px;
+text-transform: uppercase;
+}
+.footer-container{
+  display: flex;
+  align-items: baseline;
+  
+}
+.footer-content:not(:last-child){
+  margin-right: 70px;
+}
+
+
+
+.footer-link{
+  background-color: rgba(255, 255, 255, 0.10);;
+}
+
+
+.footer-icon{
+  fill: var(--title-txt-cl);
+}
+
+
 
 /* 
 ===============
@@ -377,6 +541,12 @@ Footer
 .btn.active-btn {
   color: var(--title-txt-cl);
   background-color: var(--accent-cl);
+}
+
+.filter-btn:hover,
+.filter-btn:focus{
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+
 }
 
 .gallery-title {
@@ -490,6 +660,14 @@ Portfolio section
   margin-bottom: 30px;
  
 }
+
+.gallery-item:hover,
+.gallery-item:focus{
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+
+}
+
+
 .gallery-title{
   margin-bottom: 4px;
 }
