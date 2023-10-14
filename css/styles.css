@@ -190,7 +190,7 @@ HERO
 ===============
  */
 .hero {
-  max-width: 1600рх;
+  max-width: 1600px;
   height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -274,15 +274,18 @@ HERO
 .about-icon{
   width: 270px;
   height: 120px;
-  padding-top: 25px;
+  /* padding-top: 25px;
   padding-right: 100px;
   padding-bottom: 25px;
-  padding-left: 100px; 
+  padding-left: 100px;  */
   background-color: #F5F4FA;
   width: 270px;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -339,6 +342,7 @@ Team
 .member-about{
   padding-top:30px;
   padding-bottom: 30px;
+  background-color: var(--main-bg-cl);
 }
 .member-title{
   margin-bottom: 10px;
@@ -391,7 +395,8 @@ Team
 .social-link:focus .social-icon {
   fill: var(--main-bg-cl);
 }
-.social-link:hover{
+.social-link:hover,
+.social-link:focus{
   background-color: var(--accent-cl);
 }
 
@@ -661,8 +666,8 @@ Portfolio section
  
 }
 
-.gallery-item:hover,
-.gallery-item:focus{
+.gallery-item .link:hover,
+.gallery-item .link:focus {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 
 }
