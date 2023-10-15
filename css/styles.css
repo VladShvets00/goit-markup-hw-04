@@ -661,9 +661,13 @@ Portfolio section
   /* justify-content: space-between; */
 }
 .gallery-item {
+
   margin-right: 30px;
   margin-bottom: 30px;
- 
+}
+
+.gallery-link{
+  display: block;
 }
 
 .gallery-item .link:hover,
